@@ -2,8 +2,8 @@ package small_map
 
 import "base:intrinsics"
 
-Small_Map :: struct($K, $V: typeid, $N: int) where intrinsics.type_is_comparable(K) {
-	entries: [N]struct {
+Small_Map :: struct($K, $V: typeid, $N: int) {
+	entries: #soa[N]struct {
 		key:   K,
 		value: V,
 	},

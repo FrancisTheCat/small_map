@@ -14,17 +14,17 @@ test_iterator :: proc(t: ^testing.T) {
 
 	found: int
 
-	iter := small_map_iterator(&sm)
-	for k, v in small_map_iter(&iter) {
+	iter: Small_Map_Iterator
+	for k, v in small_map_iter(&sm, &iter) {
 		switch k {
 		case 0:
-			testing.expect(t, v == 5)
+			testing.expect(t, v^ == 5)
 		case 1:
-			testing.expect(t, v == 2)
+			testing.expect(t, v^ == 2)
 		case 2:
-			testing.expect(t, v == 3)
+			testing.expect(t, v^ == 3)
 		case 69:
-			testing.expect(t, v == 420)
+			testing.expect(t, v^ == 420)
 		case:
 			testing.fail(t)
 		}
