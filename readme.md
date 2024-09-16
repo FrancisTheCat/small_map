@@ -54,7 +54,7 @@ small_map: Small_Map(int, int, 64)
 small_map_insert(&small_map, 1, 2)
 ```
 The algorithm should be pretty self explanatory, we just loop over all the entries in the map to see wether we have already inserted this key. If we have, we just update its value. If we haven't, we check if the map is full and then increment its length and put the KV-Pair at the end.
-What might be a bit more challenging to understand is the function signature. Whats up with those `$` again? These again declare variables that are known at compile time and are iferred from the type we pass in as the first argument. From then on we can use K and V as normal types, even for the other arguments of our procedure.
+What might be a bit more challenging to understand is the function signature. Whats up with those `$` again? These again declare variables that are known at compile time and are inferred from the type we pass in as the first argument. From then on we can use K and V as normal types, even for the other arguments of our procedure.
 
 ### Basic Operations
 
